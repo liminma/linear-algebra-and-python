@@ -1,1 +1,1 @@
-# linear-algebra-and-python
+# python-linear-algebra-probability-statistics
