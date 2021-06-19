@@ -203,7 +203,7 @@
   <p><a href="https://colab.research.google.com/github/liminma/python-linear-algebra-probability-statistics/blob/main/notebook/docs/matrix_rank_factorization.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="section" id="matrix-rank-factorization">
 <h1>Matrix rank factorization<a class="headerlink" href="#matrix-rank-factorization" title="Permalink to this headline">¶</a></h1>
-<p>A matrix can be factorized as <span class="math notranslate nohighlight">\(A = C*R\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is a basis of the column space, and <span class="math notranslate nohighlight">\(R\)</span> is row-reduced echelon form of A without zero rows <span id="id1">[<a class="reference internal" href="references.html#id2">Str19</a>]</span>. All three matrices have the same rank</p>
+<p>A matrix can be factorized as <span class="math notranslate nohighlight">\(A = C*R\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is a basis of the column space, and <span class="math notranslate nohighlight">\(R\)</span> is row-reduced echelon form of <span class="math notranslate nohighlight">\(A\)</span> without zero rows <span id="id1">[<a class="reference internal" href="references.html#id2">Str19</a>]</span>. All three matrices have the same rank</p>
 <div class="math notranslate nohighlight">
 \[
 rank(A) = rank(C) = rank(R)
@@ -233,9 +233,9 @@ rank(A) = rank(C) = rank(R)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rref_matrix</span><span class="p">,</span> <span class="n">rref_pivots</span> <span class="o">=</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">rref</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pivots:&quot;</span><span class="p">,</span> <span class="n">rref_pivots</span><span class="p">)</span>
-<span class="n">rref_matrix</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="p">,</span> <span class="n">rref_pivots</span> <span class="o">=</span> <span class="n">Matrix</span><span class="o">.</span><span class="n">rref</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pivots: </span><span class="si">{</span><span class="n">rref_pivots</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span>
+<span class="n">R</span>
 </pre></div>
 </div>
 </div>
@@ -260,7 +260,7 @@ rank(A) = rank(C) = rank(R)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># verify A = C*R</span>
-<span class="n">A</span> <span class="o">==</span> <span class="n">C</span> <span class="o">@</span> <span class="n">rref_matrix</span>
+<span class="n">A</span> <span class="o">==</span> <span class="n">C</span> <span class="o">@</span> <span class="n">R</span>
 </pre></div>
 </div>
 </div>
